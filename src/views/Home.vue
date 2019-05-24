@@ -91,7 +91,7 @@ export default {
                 .doc(award.id)
                 .update({ title: award.title, detail: award.detail })
                 .then(() => {
-                    alert(`update doc with id ${award.id}`);
+                    // alert(`update doc with id ${award.id}`);
                 })
                 .catch(err => {
                     alert(`update error ${err.message}`);
@@ -107,7 +107,8 @@ export default {
                         createdAt: new Date()
                     })
                     .then(docId => {
-                        alert(`New Id ${docId.id}`);
+                        console.log(`New Id ${docId.id}`);
+                        // alert(`New Id ${docId.id}`);
                     })
                     .catch(err => {
                         alert(err.message);
@@ -123,7 +124,7 @@ export default {
                 .doc(award.id)
                 .delete()
                 .then(() => {
-                    console.log(`delete award`);
+                    // console.log(`delete award`);
                     this.refreshData();
                 })
                 .catch(err => {
